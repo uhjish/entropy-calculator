@@ -165,7 +165,7 @@ class EntropyCalculator:
     def OutputWords(self,ofile,FilterType=None,Threshold=0.0):
         u"""Outputs a set of selected keywords and their scores to a file"""
         Keywords=self.FilterWords(FilterType,Threshold)
-        ofile.write(u'Word,Entropy\n')
+        ofile.write(u'Word,Entropy,Proportion of document entropy\n')
         for ((entropy,contrib),word) in Keywords:
             ofile.write(word+u','+unicode(entropy)+','+unicode(contrib)+u'\n')
 
