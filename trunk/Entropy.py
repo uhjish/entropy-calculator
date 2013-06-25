@@ -20,7 +20,7 @@ output=open(sys.argv[2],'w')
 H.OutputWords(output)
 data.close()
 output.close()
-print argv[1] "contains",H.Nwords
+print argv[1], "contains",H.Nwords
 print "Analysed with", H.Parts, "blocks"
 print "Total entropy", H.TotalEntropy,"bits"
 print "Words with entropy >",float(H.Parts)/(H.Parts+1),"are likely to be particulary significant"
