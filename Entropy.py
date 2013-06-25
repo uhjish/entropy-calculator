@@ -11,7 +11,7 @@ import EntropyCalculator
    Summary statistics will be printed to stdout"""
    
 
-H=EntropyCalculator(10)
+H=EntropyCalculator.EntropyCalculator(10)
 data=open(sys.argv[1],'r')
 H.SetText(data)
 H.SetWordsPerPart(1000)
