@@ -169,7 +169,7 @@ class EntropyCalculator:
         for ((entropy,contrib),word) in Keywords:
             ofile.write(word+u','+unicode(entropy)+','+unicode(contrib)+u'\n')
 
-   def KeywordDictionary(self):
+    def KeywordDictionary(self):
         u"""Outputs a dictionary of keywords and their entropies"""
         self.AnalyseText()
         return dict([(word,Entropy[0]) for (Entropy,word) in self.RankedWords if Entropy[0]>0.0])
